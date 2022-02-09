@@ -52,4 +52,8 @@ export class LoginComponent implements OnInit {
       )
   }
 
+  googleLogin() {
+    window.location.href = "http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:4200/oauth2/redirect"
+  }
+
 }

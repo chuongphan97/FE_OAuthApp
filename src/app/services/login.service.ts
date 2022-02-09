@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 import { MessageResponse } from '../dtos/MessageResponse.dto';
 
 const endpoint="auth/"
-
+const ggSigninEndpoint = "oauth2/authorize/google"
 @Injectable({ providedIn: "root" })
 export class LoginService {
     constructor(private httpClient: HttpClient) {
