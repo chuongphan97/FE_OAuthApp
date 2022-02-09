@@ -9,24 +9,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DomainInterceptor } from './utils/domain.interceptor';
+import { SignupComponent } from './signup/signup.component';
+import { ToastrModule } from 'ngx-toastr';
 
 const routes: Routes = [
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path: "signup",
+    component: SignupComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    ToastrModule.forRoot(),
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
